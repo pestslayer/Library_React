@@ -34,7 +34,7 @@ export const server_calls = {
   },
 
   update: async (id: string, data:any = {}) => {
-    const response = await fetch(`https://library-api-86an.onrender.com/api/stock${id}`,
+    const response = await fetch(`https://library-api-86an.onrender.com/api/stock/${id}`,
     {   
         method: 'PUT',
         headers: {
@@ -51,7 +51,7 @@ export const server_calls = {
   },
 
   delete: async (id: string) => {
-    const response = await fetch(`https://library-api-86an.onrender.com/api/stock${id}`,
+    const response = await fetch(`https://library-api-86an.onrender.com/api/stock/${id}`,
     {
         method: 'DELETE',
         headers: {
