@@ -2,7 +2,7 @@ const token = "1160de15165b74e03b1e9c13cf2022ae6d645051c0ae9340";
 
 export const server_calls = {
   get: async () => {
-    const response = await fetch(`https://library-api-86an.onrender.com`, {
+    const response = await fetch(`https://library-api-86an.onrender.com/api/stock`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -17,7 +17,7 @@ export const server_calls = {
   },
 
   create: async (data: any ={}) => {
-    const response = await fetch(`https://library-api-86an.onrender.com`,
+    const response = await fetch(`https://library-api-86an.onrender.com/api/stock`,
     {
         method: 'POST',
         headers: {
