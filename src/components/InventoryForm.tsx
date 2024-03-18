@@ -21,7 +21,7 @@ const InventoryForm = (props: InventoryFormProps) => {
     console.log(data)
     if (props.id && props.id.length > 0) {
         server_calls.update(props.id[0], data)
-        setTimeout ( () => {window.location.reload()}, 50000)
+        setTimeout ( () => {window.location.reload()}, 500)
         console.log(`Updated: ${ data.first } ${ props.id }`)
     } else {
         dispatch(chooseTitle(data.title));
@@ -32,7 +32,7 @@ const InventoryForm = (props: InventoryFormProps) => {
         console.log(data + "in dispatch")
 
         server_calls.create(store.getState())
-        setTimeout( () => {window.location.reload()},50000)
+        setTimeout( () => {window.location.reload()},500)
         event.target.reset()
 
         props.onClose();
